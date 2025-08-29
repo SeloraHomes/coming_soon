@@ -8,23 +8,36 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(circle at 30% 20%, #1a1a1a 0%, #0a0a0a 50%, #000000 100%);
-  font-family: 'Inter', sans-serif;
+  background: radial-gradient(
+    circle at 30% 20%,
+    #1a1a1a 0%,
+    #0a0a0a 50%,
+    #000000 100%
+  );
+  font-family: "Inter", sans-serif;
   color: #fff;
   position: relative;
   overflow-x: hidden;
 }
 
 body::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(212, 175, 55, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(212, 175, 55, 0.03) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -47,9 +60,16 @@ body::before {
 }
 
 .brand {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 10rem;
-  background: linear-gradient(135deg, #d4af37 0%, #f4e18a 25%, #d4af37 50%, #b87333 75%, #d4af37 100%);
+  background: linear-gradient(
+    135deg,
+    #d4af37 0%,
+    #f4e18a 25%,
+    #d4af37 50%,
+    #b87333 75%,
+    #d4af37 100%
+  );
   background-size: 400% 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -57,11 +77,13 @@ body::before {
   font-weight: 700;
   margin-bottom: 16px;
   letter-spacing: 2px;
-  animation: shimmer 4s ease-in-out infinite, slideIn 2s ease forwards;
+  animation:
+    shimmer 4s ease-in-out infinite,
+    slideIn 2s ease forwards;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 4.5rem;
   color: #ffffff;
   font-weight: 300;
@@ -108,7 +130,7 @@ h1 {
 }
 
 .footer {
-  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
   padding: 3rem 2rem 2rem;
   text-align: center;
   border-top: 1px solid rgba(212, 175, 55, 0.1);
@@ -116,7 +138,7 @@ h1 {
 }
 
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -132,7 +154,7 @@ h1 {
 }
 
 .footer-brand {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.5rem;
   background: linear-gradient(90deg, #d4af37, #b87333);
   -webkit-background-clip: text;
@@ -146,7 +168,7 @@ h1 {
   font-size: 1rem;
   color: #888;
   margin-bottom: 2rem;
-  font-style: italic;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer-links {
@@ -169,7 +191,7 @@ h1 {
 }
 
 .footer-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -190,40 +212,62 @@ h1 {
 }
 
 @keyframes logoFloat {
-  0% { transform: translateY(0px) scale(1); }
-  100% { transform: translateY(-10px) scale(1.05); }
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-10px) scale(1.05);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
   .brand {
     font-size: 6rem;
   }
-  
+
   h1 {
     font-size: 3rem;
     letter-spacing: 6px;
   }
-  
+
   .tagline {
     font-size: 1.2rem;
   }
-  
+
   .features {
     flex-direction: column;
     gap: 2rem;
