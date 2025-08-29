@@ -32,6 +32,7 @@ jobs:
         run: |
           mkdir deploy
           cp index.html deploy/
+          cp styles.css deploy/
           cp selora-homes-sq.png deploy/
 
       - name: Upload artifact
